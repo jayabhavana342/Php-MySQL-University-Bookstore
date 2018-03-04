@@ -1,0 +1,192 @@
+SURVEY PROJECT
+==============
+STEP 1:
+======
+CREATE DATABASE book_store;
+
+GRANT ALL PRIVILEGES ON book_store.* 
+TO 'book'@'localhost' 
+IDENTIFIED BY 'bookstore';
+
+SHOW GRANTS FOR 'book'@'localhost';
+
+USE book_store;
+
+STEP 2:
+=======
+USER TABLE
+==========
+
+CREATE TABLE user_info(
+	id INT(2) NOT NULL AUTO_INCREMENT,
+	name VARCHAR(30) NOT NULL,
+	mail_address VARCHAR(50) NOT NULL,
+	bill_address VARCHAR(50) NOT NULL,
+	card_type VARCHAR(15) NOT NULL,
+	card_number VARCHAR(20) NOT NULL,
+	exp_date VARCHAR(10) NOT NULL,
+	username VARCHAR(30) NOT NULL,
+	password VARCHAR(30) NOT NULL,
+	PRIMARY KEY(id)
+	);
+
+SHOW TABLES;
+
+SHOW COLUMNS FROM user_info;
+
+SELECT * FROM user_info;
+
+INSERT INTO user_info(name,mail_address,bill_address,card_type,card_number,exp_date,username,password)
+VALUES('John Bradley','509 Acacia Ave,San Diego','509 Acacia Ave,San Diego','visa','5141-1060-4724-1415','12/25','John_Bradley','12345');
+
+
+STEP 3:
+=======
+CREATE TABLE books(id INT(2) NOT NULL AUTO_INCREMENT,
+                   title VARCHAR(100) NOT NULL,
+		   isbn INT(7) NOT NULL,
+		   author VARCHAR(40) NOT NULL,
+		   subject VARCHAR(80) NOT NULL,
+                   course VARCHAR(10) NOT NULL,
+		   professor VARCHAR(15) NOT NULL,
+                   price INT(3) NOT NULL,
+	           availability VARCHAR(5) NOT NULL,
+	           image VARCHAR(150) NOT NULL,
+                   primary key(id));
+
+JILL SEAMAN
+====================================================================================================
+  
+1)INSERT INTO books(title,isbn,author,subject,course,professor,price,availability,image) 
+	VALUES('Starting Out with C++ From Control Structures through Objects',
+	'978013',
+	'Tony Gaddis',
+	'Advanced Programming Practicum',
+	'CS5301',
+	'Jill Seaman',
+	'199',
+	'New',
+	'C:\\xampp\\htdocs\\php\\survey\\images\\books_images\\1_tonny_gaddis.jpg');
+2)INSERT INTO books(title,isbn,author,subject,course,professor,price,availability,image) 
+	VALUES('Object Oriented Software Engineering Using UML, Patterns and JAVA',
+	'013606',
+	'Bernd Bruegge Allen H.Dutiot',
+	'Object Oriented Design and Implementation',
+	'CS4354',
+	'Jill Seaman',
+	'249',
+	'Used',
+	'C:\xampp\htdocs\php\survey\images\books_images\2_Object_oriented.jpg');
+3)INSERT INTO books(title,isbn,author,subject,course,professor,price,availability,image) 
+	VALUES('Data Structures and Problem Solving Using C++',
+	'02016',
+	'Weiss',
+	'Data Structures',
+	'CS3358',
+	'Jill Seaman',
+	'180',
+	'New',
+	'C:\xampp\htdocs\php\survey\images\books_images\3_DataStructures.jpg');
+
+======================================================================================================================
+XIAO CHEN
+
+4) INSERT INTO books(title,isbn,author,subject,course,professor,price,availability,image) 
+	VALUES('Operating System Concepts',
+	'01249823',
+	'Abraham Silberschatz',
+	'Operating Systems',
+	'CS4328',
+	'Xiao Chen',
+	'200',
+	'New',
+	'C:\xampp\htdocs\php\survey\images\books_images\4_Operatingsystems.jpg');
+
+5) INSERT INTO books(title,isbn,author,subject,course,professor,price,availability,image) 
+	VALUES('Software Engineering A Practitioners Approach',
+	'09218342',
+	'Roger S Pressman',
+	'Survey Of Software Engineering',
+	'CS5391',
+	'Xiao Chen',
+	'500',
+	'Used',
+	'C:\xampp\htdocs\php\survey\images\books_images\5_survey.jpg');
+=====================================================================================================================
+NGU
+
+6)INSERT INTO books(title,isbn,author,subject,course,professor,price,availability,image) 
+	VALUES('Object Oriented Design and Patterns',
+	'047174',
+	'Cay Horstmann',
+	'Object Oriented Design and Patterns',
+	'CS3354',
+	'Ngu',
+	'399',
+	'New',
+	'C:\xampp\htdocs\php\survey\images\books_images\6_Ngu_JAVA.jpg');
+
+7)INSERT INTO books(title,isbn,author,subject,course,professor,price,availability,image) 
+	VALUES('Fundamentals of Database Systems',
+	'032136',
+	'Elmasri',
+	'Introduction to Database Systems',
+	'CS4332',
+	'Ngu',
+	'498',
+	'Used',
+	'C:\xampp\htdocs\php\survey\images\books_images\7_Fundaments DB_NGU.jpg');
+======================================================================================================================
+PENG
+
+8)INSERT INTO books(title,isbn,author,subject,course,professor,price,availability,image) 
+	VALUES('Computer Networks',
+	'978013',
+	'Tanenbaum Wetherall',
+	'Computer Networks and Communication Systems',
+	'CS5310',
+	'Wuxu Peng',
+	'160',
+	'Used',
+	'C:\xampp\htdocs\php\survey\images\books_images\8_Computer_networks.jpg');
+
+9)INSERT INTO books(title,isbn,author,subject,course,professor,price,availability,image) 
+	VALUES('Wireless Communications and Networks',
+	'976431',
+	'William Stallings',
+	'Wireless Communication Networks and Systems',
+	'CS5343',
+	'Wuxu Peng',
+	'140',
+	'New',
+	'C:\xampp\htdocs\php\survey\images\books_images\9_Wireless_networks.jpg');
+========================================================================================================================
+DAN TAMIR
+
+10)INSERT INTO books(title,isbn,author,subject,course,professor,price,availability,image) 
+	VALUES('C++ GUI Programming with Qt4',
+	'091234',
+	'Jasmin Blanchette',
+	'Graphical User Interface',
+	'CS5389',
+	'Dan Tamir',
+	'169',
+	'Used',
+	'C:\xampp\htdocs\php\survey\images\books_images\10_GUI.jpg');
+
+11)INSERT INTO books(title,isbn,author,subject,course,professor,price,availability,image) 
+	VALUES('Advanced Operating Systems and Kernel Applications',
+	'291091',
+	'Jasmin Blanchette',
+	'Advanced Operating Systems',
+	'CS5306',
+	'Dan Tamir',
+	'398',
+	'New',
+	'C:\xampp\htdocs\php\survey\images\books_images\11_advanced_OS.jpg');
+
+
+
+
+
+	
